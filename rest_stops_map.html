@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a27c834672b161a2785be3aa9cf0a084 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div style="position: fixed;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 9999;
+                        background-color: #d9534f;
+                        color: white;
+                        font-size: 16pt;
+                        padding: 10px;
+                        border-radius: 5px;">
+            Drowsiness Detected! Find a place to rest safely.
+            </div>
+            
+    
+            <div class="folium-map" id="map_a27c834672b161a2785be3aa9cf0a084" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a27c834672b161a2785be3aa9cf0a084 = L.map(
+                "map_a27c834672b161a2785be3aa9cf0a084",
+                {
+                    center: [19.0728, 72.8826],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e28326e4a3bf02fe424eff6ca809a025 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e28326e4a3bf02fe424eff6ca809a025.addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var marker_0f3e3d834e769cdd69dcf9df2ecb73b0 = L.marker(
+                [19.0728, 72.8826],
+                {
+}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var icon_35a79c4e5e52208a957be091aa134e7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_610672fdf46812c3ce58c2c3c699f951 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_777c18725ca8b081fec2e332a2e4a383 = $(`<div id="html_777c18725ca8b081fec2e332a2e4a383" style="width: 100.0%; height: 100.0%;">Your Current Location</div>`)[0];
+                popup_610672fdf46812c3ce58c2c3c699f951.setContent(html_777c18725ca8b081fec2e332a2e4a383);
+            
+        
+
+        marker_0f3e3d834e769cdd69dcf9df2ecb73b0.bindPopup(popup_610672fdf46812c3ce58c2c3c699f951)
+        ;
+
+        
+    
+    
+                marker_0f3e3d834e769cdd69dcf9df2ecb73b0.setIcon(icon_35a79c4e5e52208a957be091aa134e7b);
+            
+    
+            var marker_65ac8def501a70cb51c2269fca6a6a5d = L.marker(
+                [19.073778001171313, 72.8926998372104],
+                {
+}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var icon_fd9a051a52a4ced59df762a3d4460bb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca02c4103b258c816ced40cc4072ff26 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dfb27847954b912e2f230ca5fd4de6a8 = $(`<div id="html_dfb27847954b912e2f230ca5fd4de6a8" style="width: 100.0%; height: 100.0%;">                 <div style="width: 200px">                     <h4>Highway Rest Stop #4</h4>                     <p><strong>Type:</strong> Rest Area</p>                     <p><strong>Distance:</strong> 1.1 km</p>                     <p><strong>Rating:</strong> 4.0 / 5.0</p>                     <p><strong>Amenities:</strong> EV Charging, Wifi, Food, ATM</p>                     <a href="https://www.google.com/maps/dir/?api=1&destination=19.073778001171313,72.8926998372104&travelmode=driving"                         target="_blank" style="background-color: #4CAF50; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;">                        Get Directions                     </a>                 </div>                 </div>`)[0];
+                popup_ca02c4103b258c816ced40cc4072ff26.setContent(html_dfb27847954b912e2f230ca5fd4de6a8);
+            
+        
+
+        marker_65ac8def501a70cb51c2269fca6a6a5d.bindPopup(popup_ca02c4103b258c816ced40cc4072ff26)
+        ;
+
+        
+    
+    
+                marker_65ac8def501a70cb51c2269fca6a6a5d.setIcon(icon_fd9a051a52a4ced59df762a3d4460bb0);
+            
+    
+            var marker_3c5729ed3e66505332db038efddb1123 = L.marker(
+                [19.083086648824338, 72.89553615471297],
+                {
+}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var icon_609a05e68b1dd37ff3c4f8af38ad249e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_76057f2f80175e95afdf4493d127ce05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_208d95770f990966bbd070cfe09cf00e = $(`<div id="html_208d95770f990966bbd070cfe09cf00e" style="width: 100.0%; height: 100.0%;">                 <div style="width: 200px">                     <h4>Truck Stop #1</h4>                     <p><strong>Type:</strong> Service Plaza</p>                     <p><strong>Distance:</strong> 1.8 km</p>                     <p><strong>Rating:</strong> 5.0 / 5.0</p>                     <p><strong>Amenities:</strong> Shower, Coffee, Gas</p>                     <a href="https://www.google.com/maps/dir/?api=1&destination=19.083086648824338,72.89553615471297&travelmode=driving"                         target="_blank" style="background-color: #4CAF50; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;">                        Get Directions                     </a>                 </div>                 </div>`)[0];
+                popup_76057f2f80175e95afdf4493d127ce05.setContent(html_208d95770f990966bbd070cfe09cf00e);
+            
+        
+
+        marker_3c5729ed3e66505332db038efddb1123.bindPopup(popup_76057f2f80175e95afdf4493d127ce05)
+        ;
+
+        
+    
+    
+                marker_3c5729ed3e66505332db038efddb1123.setIcon(icon_609a05e68b1dd37ff3c4f8af38ad249e);
+            
+    
+            var marker_99b61b54220630fca45553e8019cb3b8 = L.marker(
+                [19.06240427732012, 72.86771744042292],
+                {
+}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var icon_99508dfc2898f62f0063ab9bccad78f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0037925187be7384ecd733974a931a29 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5b7f9a2d5ea54b29a045591962dacd5d = $(`<div id="html_5b7f9a2d5ea54b29a045591962dacd5d" style="width: 100.0%; height: 100.0%;">                 <div style="width: 200px">                     <h4>Highway Oasis #14</h4>                     <p><strong>Type:</strong> Parking Area</p>                     <p><strong>Distance:</strong> 1.9 km</p>                     <p><strong>Rating:</strong> 4.1 / 5.0</p>                     <p><strong>Amenities:</strong> Shower, Food, 24/7 Service</p>                     <a href="https://www.google.com/maps/dir/?api=1&destination=19.06240427732012,72.86771744042292&travelmode=driving"                         target="_blank" style="background-color: #4CAF50; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;">                        Get Directions                     </a>                 </div>                 </div>`)[0];
+                popup_0037925187be7384ecd733974a931a29.setContent(html_5b7f9a2d5ea54b29a045591962dacd5d);
+            
+        
+
+        marker_99b61b54220630fca45553e8019cb3b8.bindPopup(popup_0037925187be7384ecd733974a931a29)
+        ;
+
+        
+    
+    
+                marker_99b61b54220630fca45553e8019cb3b8.setIcon(icon_99508dfc2898f62f0063ab9bccad78f6);
+            
+    
+            var marker_bd7b7a35b7cf84b3b55bec718f5b422a = L.marker(
+                [19.084895968088517, 72.8688179889715],
+                {
+}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var icon_8dbeef0cbd421a72abd8fb72f3d802a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cb40546aa9854dd451cfc96f1c45743e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4233ba39a628b1b39d7a0b46c94779a3 = $(`<div id="html_4233ba39a628b1b39d7a0b46c94779a3" style="width: 100.0%; height: 100.0%;">                 <div style="width: 200px">                     <h4>Roadside Cafe #2</h4>                     <p><strong>Type:</strong> Service Plaza</p>                     <p><strong>Distance:</strong> 2.0 km</p>                     <p><strong>Rating:</strong> 4.0 / 5.0</p>                     <p><strong>Amenities:</strong> Parking, Shower</p>                     <a href="https://www.google.com/maps/dir/?api=1&destination=19.084895968088517,72.8688179889715&travelmode=driving"                         target="_blank" style="background-color: #4CAF50; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;">                        Get Directions                     </a>                 </div>                 </div>`)[0];
+                popup_cb40546aa9854dd451cfc96f1c45743e.setContent(html_4233ba39a628b1b39d7a0b46c94779a3);
+            
+        
+
+        marker_bd7b7a35b7cf84b3b55bec718f5b422a.bindPopup(popup_cb40546aa9854dd451cfc96f1c45743e)
+        ;
+
+        
+    
+    
+                marker_bd7b7a35b7cf84b3b55bec718f5b422a.setIcon(icon_8dbeef0cbd421a72abd8fb72f3d802a8);
+            
+    
+            var marker_9ab7d7483145f37669c02c366140afb2 = L.marker(
+                [19.077196233093023, 72.86288180001844],
+                {
+}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var icon_e74491c6bb27156410191fdd27e97d37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a20f050c98dddfd8a7cff273c9f57bd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4aed3e60bd3bbbb02f367f0df72a0370 = $(`<div id="html_4aed3e60bd3bbbb02f367f0df72a0370" style="width: 100.0%; height: 100.0%;">                 <div style="width: 200px">                     <h4>Highway Oasis #3</h4>                     <p><strong>Type:</strong> Rest Area</p>                     <p><strong>Distance:</strong> 2.1 km</p>                     <p><strong>Rating:</strong> 3.8 / 5.0</p>                     <p><strong>Amenities:</strong> EV Charging, 24/7 Service, Wifi</p>                     <a href="https://www.google.com/maps/dir/?api=1&destination=19.077196233093023,72.86288180001844&travelmode=driving"                         target="_blank" style="background-color: #4CAF50; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;">                        Get Directions                     </a>                 </div>                 </div>`)[0];
+                popup_3a20f050c98dddfd8a7cff273c9f57bd.setContent(html_4aed3e60bd3bbbb02f367f0df72a0370);
+            
+        
+
+        marker_9ab7d7483145f37669c02c366140afb2.bindPopup(popup_3a20f050c98dddfd8a7cff273c9f57bd)
+        ;
+
+        
+    
+    
+                marker_9ab7d7483145f37669c02c366140afb2.setIcon(icon_e74491c6bb27156410191fdd27e97d37);
+            
+    
+            var poly_line_1dacdfb1aca129907051b4f4ed64a432 = L.polyline(
+                [[19.0728, 72.8826], [19.073778001171313, 72.8926998372104]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var poly_line_017090f8a3f9664eea515bdbe3cad568 = L.polyline(
+                [[19.0728, 72.8826], [19.083086648824338, 72.89553615471297]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var poly_line_6faa7aba419d4a894ddef3120275a50d = L.polyline(
+                [[19.0728, 72.8826], [19.06240427732012, 72.86771744042292]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var poly_line_da56db19bfeec2cd985a38dd94da289c = L.polyline(
+                [[19.0728, 72.8826], [19.084895968088517, 72.8688179889715]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+    
+            var poly_line_cd243f6fad0e8889da40370293cbc489 = L.polyline(
+                [[19.0728, 72.8826], [19.077196233093023, 72.86288180001844]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_a27c834672b161a2785be3aa9cf0a084);
+        
+</script>
+</html>
