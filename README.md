@@ -1,4 +1,4 @@
-# Drowsiness-Detection-and-Navigation-System
+
 # 🚘 Drowsiness Detection and Navigation System
 
 An innovative, AI-powered system aimed at **reducing road accidents caused by driver fatigue**, especially designed for **manual and budget-friendly vehicles**. This project offers a real-time drowsiness detection and rest stop navigation feature — bringing safety technology to every driver, not just luxury car owners.
